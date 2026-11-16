@@ -70,7 +70,7 @@ install -m 755 "$TMP" "$BIN"
 # 그룹 키는 root 만 읽는 파일에 둔다. 명령줄이나 서비스 파일에는 남기지 않는다.
 if [ -n "$KEY" ]; then
     clean_name=$(printf '%s' "$NAME" | tr -d '"\\\n\r' | cut -c1-40)
-    clean_key=$(printf '%s' "$KEY" | tr -cd 'A-Za-z0-9 -')
+    clean_key=$(printf '%s' "$KEY" | tr -cd 'A-Za-z0-9 @.:-')
     (
         umask 077
         printf 'DESK_JOIN="%s"\nDESK_NAME="%s"\n' "$clean_key" "$clean_name" > "$ENV_FILE"

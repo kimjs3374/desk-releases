@@ -13,9 +13,11 @@
 
 필요한 것: 64비트 Windows 10/11, WebView2(Windows 11에는 기본 포함), 화면을 보내는 PC에는 NVIDIA, AMD 또는 Intel 그래픽.
 
+ID로 서로를 찾으려면 접속 서버가 필요합니다. 프로그램에는 서버 주소가 들어 있지 않으며, **설정**에서 직접 넣거나 그룹에 참여할 때 키와 함께 자동으로 설정됩니다. 서버는 `desk server`로 직접 운영합니다.
+
 ## 리눅스 서버
 
-서버에서 아래 한 줄을 실행합니다. 그룹 키는 desk 앱의 **내 기기 > 기기 추가**에 나옵니다.
+서버에서 아래 한 줄을 실행합니다. 그룹 키는 desk 앱의 **내 기기 > 기기 추가**에 나옵니다. 키에는 접속 서버 주소가 함께 들어 있어서 따로 설정할 것이 없습니다.
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/kimjs3374/desk-releases/main/install.sh | sudo sh -s -- 그룹키 서버이름
